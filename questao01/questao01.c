@@ -10,4 +10,5 @@ int main()
  *p - *q;
  **&p;
  3 - *p/(*q) + 7;
+ return 0;
 }
