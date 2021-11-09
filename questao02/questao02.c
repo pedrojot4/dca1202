@@ -7,3 +7,5 @@ int main()
  printf("%x %d %d %d %d", p,*p+2,**&p,3**p,**&p+4);
  return 0;
 }
+
+//retorna 4094 7 5 15 9
