@@ -6,7 +6,7 @@ void soma(float *v1, float *v2, float *v3, int m){
 
 int r;
 
-    for(r=0; r<m; r++){
+    for(r=0; r<m; r++){                            //Função que soma os vetores e exibe o resultado.
     v3[r]=(v1[r]+v2[r]);
 }
 printf("\n vet1 + vet2 = ( ");
@@ -22,7 +22,7 @@ int main (){
 
 int n, i;
 
-printf("\n Tamanho dos vetores: ");
+printf("\n Tamanho dos vetores: ");               //Digite o tamanho dos vetores .
 scanf("%d", &n);
 printf("\n");
 
@@ -31,7 +31,7 @@ float vet1[n], vet2[n], vet3[n];
 for(i=0; i<n; i++){
     printf("vet1[");
     printf("%d", i);
-    printf("] = ");
+    printf("] = ");                              //Digite o conteudo do vetor 1.
     scanf("%d", &vet1[i]); 
 }
 printf("\n");
@@ -39,11 +39,11 @@ printf("\n");
 for(i=0; i<n; i++){
     printf("vet2[");
     printf("%d", i);
-    printf("] = ");
+    printf("] = ");                               //Digite o conteudo do vetor 2.
     scanf("%d", &vet2[i]); 
 }
 
-soma(vet1, vet2, vet3, n);
+soma(vet1, vet2, vet3, n);                        //Chama a função soma.
 
     return 0;
 }
