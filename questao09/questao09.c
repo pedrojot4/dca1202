@@ -4,16 +4,15 @@
 
 int main (){
 
- char   x[4];
- float  y[4];
- double z[4];
- int    w[4]={1,2,3,4}, *pc, *pf, *pd, *pi;
+ char   x[4]= "PQRS", *pc;
+ float  y[4]={24,56,39,97}, *pf;
+ double z[4]={1000,2000,3000,4000}, *pd;
+ int    w[4]={1,2,3,4}, *pi;
 
-pc = x[0];
-//pf = y[0];
-//pd = z[0];
-pi = w[0];
-//
+pc = &x[0];
+pf = &y[0];
+pd = &z[0];
+pi = &w[0];
 
  /*
  
@@ -26,26 +25,26 @@ pi = w[0];
 
  */ 
 
-printf("\nAdress Char: %d", &x);
-printf("\nAdress Char: %d", &x+1);
-printf("\nAdress Char: %d", &x+2);
-printf("\nAdress Char: %d", &x+3);
+printf("\nConteudo Char: %c", *x);
+printf("\nConteudo Char: %c", *x+1);
+printf("\nConteudo Char: %c", *x+2);
+printf("\nConteudo Char: %c", *x+3);
 
-//printf("\nAdress Float: %d", &y);
-//printf("\nAdress Float: %d", &y+1);
-//printf("\nAdress Float: %d", &y+2);
-//printf("\nAdress Float: %d", &y+3);
-//
-//printf("\nAdress Double: %d", &z);
-//printf("\nAdress Double: %d", &z+1);
-//printf("\nAdress Double: %d", &z+2);
-//printf("\nAdress Double: %d", &z+3);
-//
+printf("\nConteudo Float: %f", *y);
+printf("\nConteudo Float: %f", *y+1);
+printf("\nConteudo Float: %f", *y+2);
+printf("\nConteudo Float: %f", *y+3);
 
-printf("\nAdress Int: %d", &w);
-printf("\nAdress Int: %d", &w+1);
-printf("\nAdress Int: %d", &w+2);
-printf("\nAdress Int: %d", &w+3);
+printf("\nConteudo Double: %f", *z);
+printf("\nConteudo Double: %f", *z+1);
+printf("\nConteudo Double: %f", *z+2);
+printf("\nConteudo Double: %f", *z+3);
+
+
+printf("\nConteudo Int: %d", *w);
+printf("\nConteudo Int: %d", *w+1);
+printf("\nConteudo Int: %d", *w+2);
+printf("\nConteudo Int: %d", *w+3);
 
     return 0;
 }
