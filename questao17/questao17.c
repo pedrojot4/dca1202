@@ -43,7 +43,7 @@ for(i=0; i<n; i++){
     scanf("%d", &vet2[i]); 
 }
 
-soma(vet1, vet2, vet3, n);                        //Chama a função soma.
+soma(vet1, vet2, vet3, n);                         //Chama a função soma.
 
     return 0;
 }
