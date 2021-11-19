@@ -1,71 +1,71 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-int main (){
+void produtomatricial(int lineA, int ColA, int ColB, int mmA[lineA][ColA], int mmB[ColA][ColB], int mmC[lineA][ColB])
+{
 
-int n, m, r, p, i, q, s;
-
-printf("\n Numero de linhas da Matriz A: ");
-scanf("%d", &n);
-
-printf("\n Numero de colunas da Matriz A = Numero de linhas da Matriz B: ");             //Digite o tamanho das matrizes
-scanf("%d", &m);
-
-printf("\n Numero de colunas da Matriz B: ");
-scanf("%d", &r);
-printf("\n");
-
-int mtA[n][m], mtB[m][r], mtC[n][r];
-
-for(i=0; i<n; i++){
-    for(p=0; p<m; p++){
-        printf("mtA[");
-        printf("%d", i);
-        printf("]");
-        printf("[");                                              //Digite o conteudo da matriz A.
-        printf("%d", p);
-        printf("] = ");                                
-        scanf("%d", &s);
-        mtA[i][p] = s;
-        mtC[i][p] = 0;
-    }
-}
-printf("\n");
-
-for(i=0; i<m; i++){
-    for(p=0; p<r; p++){
-        printf("mtB[");
-        printf("%d", i);
-        printf("]");
-        printf("[");
-        printf("%d", p);                                         //Digite o conteudo da matriz B.
-        printf("] = ");                                
-        scanf("%d", &s);
-        mtB[i][p] = s;
-        mtC[i][p] = 0;
-    }
-}
-printf("\n");
-
-for(i=0; i<n; i++){
-    for(p=0; p<r; p++){
-        for(q=0; q<m; q++){
-            mtC[i][p] = mtC[i][p]+(mtA[i][m]*mtB[m][p]);              //Multiplica as matrizes
+    for (int i = 0; i < lineA; i++)
+    {
+        for (int j = 0; j < ColB; j++)
+        {
+            for (int k = 0; k < ColA; k++)
+            {
+                mmC[i][j] = mmC[i][j] + (mmA[i][k] * mmB[k][j]);
+            }
         }
     }
 }
 
-printf("\n mtA * mtB = \n\n");
+int main()
+{
 
-for(i=0; i<n; i++){
-    for(p=0; p<r; p++){
-        printf("%4d ", mtC[i][p]);                                     //Exibe o resultado.
+    /*
+    i linha  ;
+    j coluna ;
+    */
+    int ai, bi, abj, i, j;
+    printf("\n Numero de linhas da Matriz A:");
+    scanf("%d", &ai);
+
+    printf("\n Numero de colunas da Matriz A e Linhas Matriz B:");
+    scanf("%d", &abj);
+
+    printf("\n Numero de linhas da Matriz B:");
+    scanf("%d", &bi);
+
+    int mtA[ai][abj], mtB[abj][bi], mtC[ai][bi];
+
+    for (i = 0; i < ai; i++)
+    {
+        for (j = 0; j < abj; j++)
+        {
+            printf("\nDigite os conteudos da matriz A[%d][%d]:", i, j);
+            scanf("%d", &mtA[i][j]);
+            mtC[i][j] = 0;
+        }
     }
-    printf("\n");
-}
 
-printf("\n");
+    for (i = 0; i < abj; i++)
+    {
+        for (j = 0; j < bi; j++)
+        {
+            printf("\nDigite os conteudos da matriz B[%d][%d]:", i, j);
+            scanf("%d", &mtB[i][j]);
+            mtC[i][j] = 0;
+        }
+    }
+
+    produtomatricial(ai, abj, bi, mtA, mtB, mtC);
+
+    for (i = 0; i < ai; i++)
+    {
+        for (j = 0; j < bi; j++)
+        {
+
+            printf("\nMatriz C:[%d][%d]: %d", i, j, mtC[i][j]);
+        }
+    }
 
     return 0;
 }
