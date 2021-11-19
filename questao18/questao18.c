@@ -31,7 +31,7 @@ int main()
     printf("\n Numero de colunas da Matriz A e Linhas Matriz B:");
     scanf("%d", &abj);
 
-    printf("\n Numero de linhas da Matriz B:");
+    printf("\n Numero de colunas da Matriz B:");
     scanf("%d", &bi);
 
     int mtA[ai][abj], mtB[abj][bi], mtC[ai][bi];
