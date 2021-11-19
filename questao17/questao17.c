@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<math.h>
 
-void soma(float *v1, float *v2, float *v3, int m){
+void soma(int *v1, int *v2, int *v3, int m){
 
 int r;
 
@@ -22,11 +22,11 @@ int main (){
 
 int n, i;
 
-printf("\n Tamanho dos vetores: ");               //Digite o tamanho dos vetores .
+printf("\n Tamanho dos vetores: ");               //Digite o tamanho dos vetores.
 scanf("%d", &n);
 printf("\n");
 
-float vet1[n], vet2[n], vet3[n];
+int vet1[n], vet2[n], vet3[n];
 
 for(i=0; i<n; i++){
     printf("vet1[");

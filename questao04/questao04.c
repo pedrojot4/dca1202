@@ -56,7 +56,7 @@ vetor[1] = 45;
 vetor[2] = 27;
 p4 = vetor;
 idade = *p4;
-printf("Mostrara o primeiro conteúdo do vetor: %d \n", idade);
+printf("Mostra o valor do vetor[0]: %d \n", idade);
 
 /* (i) */
 p5 = p4 + 1;
@@ -75,7 +75,7 @@ printf("Volta para o vetor[1]: %d \n", idade);
 
 /* (m) */
 p5 = &vetor[2] - 1;
-printf("Volta para o veotr[1]: %d \n", *p5);
+printf("Volta para o vetor[1]: %d \n", *p5);
 /* (n) */
 p5++;
 printf("Volta para o vetor[2]: %d \n", *p5);
