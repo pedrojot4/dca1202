@@ -1,0 +1,11 @@
+Questão 16
+
+A medição de tempo de execução de determinadas rotinas, podem ocorrer a partir  de funções específicas em C usando a biblioteca time.h. Uma delas é a função "time_t time (time_t *end)" ela devolve a leitura de execução de determinadas operações em segundos. 
+Assim, a função além de atribuir a leitura do relógio em segundos, à variável cujo endereço é end, sendo ele, "NULL". Já a função clock, a função
+A função clock devolve o tempo de CPU decorrido desde o início da execução do seu programa até a captura do tempo final da execução do programa. Isto é, o tempo é medido em ciclos do relógio interno. Cada "CLOCKS_PER_SEC" ciclos
+correspondem aproximadamente a 1 segundo. Para a obtenção do programa no valor em milisegundos basta dividir o "CLOCKS_PER_SEC" por 1000. Vale ressaltar que há a função chamada "difftime"  a qual é responsável por realizar a operação de diferença entre o time final e o tempo inicial de uma dada operação, como foi feita para os códigos da questão 14 e da questão 15. Dessa forma, conseguimos saber o tempo necessário para a execução dos mesmos. Uma forma de conseguir medir tempos de execuções de rotinas é utilizando interrupções, ou seja, a partir de um acionamento de um botão ON, por exemplo, um contador é acionado. Caso um outro botão seja acionado, um novo contador é acionado. Assim pode saber, quanto tempo um sistema ficou ligado.
+A questão 14 levou 10.22 segundos para executar o vetor de tamanho 3 em ordem crescente. Já a questão 15 levou cerca de 9.4 segundos para executar a mesma operação da questão 14.
+
+ 
+ 
+ 
