@@ -21,8 +21,8 @@ int main()
 {
 
     int tam, i, k;                                                         //  Os ponteiros são variáveis que guardam um endereço de memória.
-    float *var, aux;                                                       //  Os ponteiros para uma funçao representa uma melhor otimizaçao do codigo, 
-                                                                           //  uma implementaçao mais generica.
+    float *var, aux;                                                       //  Os ponteiros para uma função representam uma melhor otimização do codigo, 
+                                                                           //  uma implementação mais generica.
     printf("\n");                                                          //  Já que, em muitos casos substituem o trabalho braçal de reescrever a função.
     printf("Tamanho do vetor: ");
     scanf("%d", &tam);
