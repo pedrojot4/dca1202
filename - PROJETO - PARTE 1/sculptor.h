@@ -7,7 +7,7 @@
 class sculptor 
 {
     protected:
-      Voxel ***v; // Matrix 3D  
+      Voxel ***M3D; // Matrix 3D - Cada ponteiro refere-se a cada dimensão da matriz.
       int nx,ny,nz; // Dimensões da matriz
       float r,g,b,a; // Cores 
       
